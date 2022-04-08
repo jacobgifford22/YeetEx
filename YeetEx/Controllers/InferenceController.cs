@@ -13,9 +13,12 @@ namespace Intex_2.Controllers
     {
         private InferenceSession _session;
 
-        public InferenceController(InferenceSession session)
+        private InferenceSession _session2;
+
+        public InferenceController()
         {
-            _session = session;
+            _session = new InferenceSession("model_severity.onnx");
+            _session2 = new InferenceSession("model_county_accidents.onnx"); 
         }
 
         [HttpGet]
@@ -46,12 +49,12 @@ namespace Intex_2.Controllers
         [HttpPost]
         public IActionResult Crash_Score(CrashCount data)
         {
-            var result = _session.Run(new List<NamedOnnxValue>
+            var result = _session2.Run(new List<NamedOnnxValue>
             {
                 NamedOnnxValue.CreateFromTensor("float_input", data.AsTensor())
             });
-            Tensor<string> score = result.First().AsTensor<string>();
-            var prediction = new Prediction { PredictedValue = score.First() };
+            Tensor<float> score = result.First().AsTensor<float>();
+            var prediction = new Prediction { PredictedValue = ((int) score.First()).ToString() };
             result.Dispose();
             return View("Crash_Score", prediction);
         }
