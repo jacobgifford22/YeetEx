@@ -102,7 +102,6 @@ namespace Intex_2.Infrastructure
         {
             IUrlHelper uh = _uhf.GetUrlHelper(vc);
 
-            string url;
             TagBuilder tag;
             tag = new TagBuilder("a");
             // url = PageModel.UrlParams.Replace("-", pageNumber.ToString());
