@@ -32,10 +32,10 @@ namespace Intex_2
             services.AddControllersWithViews();
 
             services.AddSingleton<InferenceSession>(
-                new InferenceSession("model_severity.onnx"));
+                new InferenceSession("wwwroot/model_severity.onnx"));
 
             services.AddSingleton<InferenceSession>(
-                new InferenceSession("model_county_accidents.onnx"));
+                new InferenceSession("wwwroot/model_county_accidents.onnx"));
 
             services.AddDbContext<CrashDbContext>(options =>
             {

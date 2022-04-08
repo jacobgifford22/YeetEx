@@ -17,8 +17,8 @@ namespace Intex_2.Controllers
 
         public InferenceController()
         {
-            _session = new InferenceSession("model_severity.onnx");
-            _session2 = new InferenceSession("model_county_accidents.onnx"); 
+            _session = new InferenceSession("wwwroot/model_severity.onnx");
+            _session2 = new InferenceSession("wwwroot/model_county_accidents.onnx"); 
         }
 
         [HttpGet]

@@ -6,9 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="model_county_accidents.onnx">
+    <None Include="wwwroot\model_county_accidents.onnx" />
+    <None Include="wwwroot\model_severity.onnx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -32,9 +33,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="model_severity.onnx">
+    <Content Update="wwwroot\model_county_accidents.onnx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
 
 </Project>
