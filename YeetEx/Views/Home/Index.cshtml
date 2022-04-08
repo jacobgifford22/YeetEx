@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2">UDOT crash data from 2016-2019</h1>
+                    <p class="lead fw-normal text-white-50 mb-4">
+                        This website is here to provide critical information regarding Utah crashes between the years 2016-2019. The original data came from The Crash Studies Team at UDOT’s Traffic & Safety Division. This site explores the connections between crash severity and the Utah motor vehicle collision data.
+                    </p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" asp-controller="Home" asp-action="MLModel">Predict Severity</a>
+                        <a class="btn btn-outline-light btn-lg px-4" asp-controller="Home" asp-action="ViewCrashes">View Data</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="~/img/car_crash_2.jpg" alt="..." /></div>
+        </div>
+    </div>
+</header>
+
+<!-- Features section-->
+<section class="py-5" id="features">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Utah Motor Vehicle Accident Statistics</h2></div>
+            <div class="col-lg-8">
+                <div class="row gx-5 row-cols-1 row-cols-md-2">
+                    <div class="col mb-5 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                        <h2 class="h5">Crash Severity Prediction</h2>
+                        <p class="mb-0">We can predict how severe a crash is based on calculations regarding city, county, teenager driving, etc. </p>
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                        <h2 class="h5">The More You Know</h2>
+                        <p class="mb-0">Here are some interesting facts about crashes here in Utah and some preventative measures we can take.</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial section-->
+<div class="py-5 bg-light">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10 col-xl-7">
+                <div class="text-center">
+                    <div class="fs-4 mb-4 fst-italic">"The simple decision to choose to wear your seat belt every time you are in a vehicle can and does save lives."</div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        @*<img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />*@
+                        <div class="fw-bold">
+                            Carlose Braceras
+                            <span class="fw-bold text-primary mx-1">/</span>
+                            Executive Director, UDOT
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
